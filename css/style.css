@@ -3,3 +3,49 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* Slider */
+.slider-container {
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+}
+
+.slider .images {
+    padding: 0 30px;
+}
+
+.slider .arrow {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Circles */
+.circles {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 15px;
+    border-radius: 999px;
+}
+
+.circles .circle {
+    color: #fff;
+    margin: 0 5px;
+}
+.circles .circle.active {
+    color: blue;
+}
