@@ -39,6 +39,11 @@ var app = new Vue({
                     this.currentImageIndex = prevImageIndex;
                 }
             }
+        },
+        created() {
+            setInterval(() => {
+                this.nextImage();
+            }, 3000);            
         }
 });
 
