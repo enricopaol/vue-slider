@@ -16,17 +16,17 @@
         <div class="slider-container">
             <!-- Slider -->
             <div class="slider">
-                <div class="arrow"><i class="fas fa-chevron-left"></i></div>
+                <div @click="prevImage" class="arrow"><i class="fas fa-chevron-left"></i></div>
                 <div class="images">
-                    <img src="img/campagna.jpg" alt="campagna">
+                    <img :src="images[currentImageIndex].source" :alt="images[currentImageIndex].alt">
                 </div>
-                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                <div @click="nextImage" class="arrow"><i class="fas fa-chevron-right"></i></div>
             </div>
             <!-- End Slider -->
 
             <!-- Circles -->
             <div class="circles">
-                <span class="circle"><i class="fas fa-circle"></i></span>
+                <span v-for="(image, index) in images" class="circle" :class="{'active': index == currentImageIndex}"><i class="fas fa-circle"></i></span>
             </div>
             
 
